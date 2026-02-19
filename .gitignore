@@ -1,8 +1,10 @@
-_site
+# Zola build output
+public/
+
+# Nix
+result
+result-*
+.direnv/
+
+# System files
 .DS_Store
-.jekyll
-.bundle
-.sass-cache
-Gemfile.lock
-node_modules
-package.json

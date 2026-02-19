@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ config.title }} – {{ config.description }}</title>
+
+    <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    {% if page.summary %}
+    <meta name="description" content="{{ page.summary | striptags }}" />
+    <meta property="og:description" content="{{ page.summary | striptags }}" />
+    {% else %}
+    <meta name="description" content="{{ config.description }}">
+    <meta property="og:description" content="{{ config.description }}" />
+    {% endif %}
+    <meta name="author" content="{{ config.title }}" />
+
+    {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="twitter:title" content="{{ page.title }}" />
+    {% endif %}
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ config.title }} - {{ config.description }}" href="/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">{{ config.title }}</a></h1>
+          </div>
+
+          <nav>
+            <a href="/">Blog</a>
+            <a href="/">About</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      {% block content %}{% endblock content %}
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          {% if config.extra.footer_links %}
+            {% if config.extra.footer_links.dribbble %}<a href="https://dribbble.com/{{ config.extra.footer_links.dribbble }}"><i class="svg-icon dribbble"></i></a>{% endif %}
+            {% if config.extra.footer_links.email %}<a href="mailto:{{ config.extra.footer_links.email }}"><i class="svg-icon email"></i></a>{% endif %}
+            {% if config.extra.footer_links.facebook %}<a href="https://www.facebook.com/{{ config.extra.footer_links.facebook }}"><i class="svg-icon facebook"></i></a>{% endif %}
+            {% if config.extra.footer_links.flickr %}<a href="https://www.flickr.com/{{ config.extra.footer_links.flickr }}"><i class="svg-icon flickr"></i></a>{% endif %}
+            {% if config.extra.footer_links.github %}<a href="https://github.com/{{ config.extra.footer_links.github }}"><i class="svg-icon github"></i></a>{% endif %}
+            {% if config.extra.footer_links.instagram %}<a href="https://instagram.com/{{ config.extra.footer_links.instagram }}"><i class="svg-icon instagram"></i></a>{% endif %}
+            {% if config.extra.footer_links.linkedin %}<a href="https://www.linkedin.com/in/{{ config.extra.footer_links.linkedin }}"><i class="svg-icon linkedin"></i></a>{% endif %}
+            {% if config.extra.footer_links.pinterest %}<a href="https://www.pinterest.com/{{ config.extra.footer_links.pinterest }}"><i class="svg-icon pinterest"></i></a>{% endif %}
+            {% if config.extra.footer_links.rss %}<a href="/feed.xml"><i class="svg-icon rss"></i></a>{% endif %}
+            {% if config.extra.footer_links.twitter %}<a href="https://www.twitter.com/{{ config.extra.footer_links.twitter }}"><i class="svg-icon twitter"></i></a>{% endif %}
+            {% if config.extra.footer_links.stackoverflow %}<a href="http://stackoverflow.com/{{ config.extra.footer_links.stackoverflow }}"><i class="svg-icon stackoverflow"></i></a>{% endif %}
+            {% if config.extra.footer_links.youtube %}<a href="https://youtube.com/{{ config.extra.footer_links.youtube }}"><i class="svg-icon youtube"></i></a>{% endif %}
+            {% if config.extra.footer_links.googleplus %}<a href="https://plus.google.com/{{ config.extra.footer_links.googleplus }}"><i class="svg-icon googleplus"></i></a>{% endif %}
+            <br/>
+          {% endif %}
+
+          <small>
+            <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Blog</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://praseodym.net/blog" property="cc:attributionName" rel="cc:attributionURL">praseodym</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+            Copyright &copy; 2015-2020 praseodym.
+          </small>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
