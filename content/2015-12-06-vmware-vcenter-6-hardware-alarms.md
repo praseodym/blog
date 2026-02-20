@@ -6,6 +6,8 @@ slug = "2015/12/06/vmware-vcenter-6-hardware-alarms"
 
 Recently a drive in one of our VMware ESXi servers failed. The drive was part of a RAID array, so this failure did not cause any immediate problems. However, what surprised us was that VMware vCenter did not trigger any alarms about this drive failure.
 
+<!-- more -->
+
 The first thought was that VMware did not know about this hardware problem. However, the server (CIM) hardware sensor status within vCenter clearly shows that one of our drives has failed:
 ![ESXi hardware status](/images/2015-12-06-vmware-vcenter-6-hardware-alarms/esxi-hardware-status.png)
 
