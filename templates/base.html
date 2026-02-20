@@ -23,7 +23,7 @@
     {% endif %}
 
     <link rel="stylesheet" type="text/css" href="/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ config.title }} - {{ config.description }}" href="/feed.xml" />
+    <link rel="alternate" type="application/atom+xml" title="{{ config.title }} - {{ config.description }}" href="/atom.xml" />
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
@@ -60,7 +60,7 @@
             {% if config.extra.footer_links.instagram %}<a href="https://instagram.com/{{ config.extra.footer_links.instagram }}"><i class="svg-icon instagram"></i></a>{% endif %}
             {% if config.extra.footer_links.linkedin %}<a href="https://www.linkedin.com/in/{{ config.extra.footer_links.linkedin }}"><i class="svg-icon linkedin"></i></a>{% endif %}
             {% if config.extra.footer_links.pinterest %}<a href="https://www.pinterest.com/{{ config.extra.footer_links.pinterest }}"><i class="svg-icon pinterest"></i></a>{% endif %}
-            {% if config.extra.footer_links.rss %}<a href="/feed.xml"><i class="svg-icon rss"></i></a>{% endif %}
+            {% if config.extra.footer_links.rss %}<a href="/atom.xml"><i class="svg-icon rss"></i></a>{% endif %}
             {% if config.extra.footer_links.twitter %}<a href="https://www.twitter.com/{{ config.extra.footer_links.twitter }}"><i class="svg-icon twitter"></i></a>{% endif %}
             {% if config.extra.footer_links.stackoverflow %}<a href="http://stackoverflow.com/{{ config.extra.footer_links.stackoverflow }}"><i class="svg-icon stackoverflow"></i></a>{% endif %}
             {% if config.extra.footer_links.youtube %}<a href="https://youtube.com/{{ config.extra.footer_links.youtube }}"><i class="svg-icon youtube"></i></a>{% endif %}
