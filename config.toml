@@ -12,17 +12,12 @@ default_language = "en"
 compile_sass = true
 
 # Whether to generate a feed file for the site
-generate_feed = true
+generate_feeds = true
 
-# The filename to use for the feed. Used as the template filename, too.
+# The filenames to use for the feeds. Used as the template filenames, too.
 # Defaults to "atom.xml", which has a built-in template that renders an Atom 1.0 feed.
 # There is also a built-in template "rss.xml" that renders an RSS 2.0 feed.
-feed_filename = "feed.xml"
-
-# When set to "true", a feed is automatically generated for each taxonomy term.
-# Available categories, tags, etc. will have their own feed.
-generate_categories_pages = false
-generate_tags_pages = false
+feed_filenames = ["feed.xml"]
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
